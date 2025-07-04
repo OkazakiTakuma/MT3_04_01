@@ -20,3 +20,7 @@ struct Ball {
 	float radius;         //!< ボールの半径
 	unsigned int color;   //!< ボールの色
 };
+
+Vector3 CirecleMove(const Vector3& center, float radius, float angle);
+
+Vector3 SpringForce(const Spring& spring, Vector3 boundPosition, Vector3 velocity, float mass, Vector3 acceleration, float deltaTIme);

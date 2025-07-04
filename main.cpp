@@ -106,9 +106,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 		if (movingFlag) {
 			angle += angularVelocity * deltaTime;
-			movingPoint.x = c.x + std::cos(angle) * radius;
-			movingPoint.y = c.y + std::sin(angle) * radius;
-			movingPoint.z = c.z;
+			movingPoint = CirecleMove(c, radius, angle);
+			
 		}
 
 		// 衝突判定
